@@ -3172,6 +3172,8 @@ void NavigationView::UpdateListViewItemSource()
         dataSource = MenuItems();
     }
 
+    UpdateNodeTree();
+
     // Always unset the data source first from old ListView, then set data source for new ListView.
     if (IsTopNavigationView())
     {
@@ -3189,6 +3191,11 @@ void NavigationView::UpdateListViewItemSource()
         InvalidateTopNavPrimaryLayout();
         UpdateSelectedItem();
     }
+}
+
+void NavigationView::UpdateNodeTree()
+{
+
 }
 
 void NavigationView::UpdateListViewItemsSource(const winrt::ListView& listView, 
