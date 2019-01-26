@@ -2730,7 +2730,7 @@ void NavigationView::OnIsPaneOpenChanged()
 
     if (SharedHelpers::IsThemeShadowAvailable())
     {
-#ifdef USE_INSIDER_SDK
+#ifdef USE_INTERNAL_SDK
         if (auto splitView = m_rootSplitView.get())
         {
             if (auto paneRoot = splitView.Pane())
